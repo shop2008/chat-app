@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { Picker } from "emoji-mart";
 import "emoji-mart/css/emoji-mart.css";
 
-const socket = io("http://localhost:5001");
+const socket = io("https://chat-app-4exi.onrender.com/");
 
 function App() {
   const [messages, setMessages] = useState([]);
