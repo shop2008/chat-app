@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import io from "socket.io-client";
-import { Picker } from "emoji-mart";
-import "emoji-mart/css/emoji-mart.css";
+import data from "@emoji-mart/data";
+import Picker from "@emoji-mart/react";
 
 const socket = io("https://chat-app-4exi.onrender.com/");
 
@@ -212,7 +212,7 @@ function App() {
         </form>
         {showEmojiPicker && (
           <div className="absolute bottom-16 right-4">
-            <Picker onSelect={addEmoji} />
+            <Picker data={data} onEmojiSelect={addEmoji} />
           </div>
         )}
       </div>
